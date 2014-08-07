@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FBUYummlyWebViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface FBUYummlyWebViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
 @property (weak, nonatomic) IBOutlet UITextField *searchTextField;
 @property (weak, nonatomic) IBOutlet UICollectionView *recipesCollectionView;
