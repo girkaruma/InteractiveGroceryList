@@ -11,6 +11,8 @@
 @interface FBUYummlyWebViewController ()
 
 @property (strong, nonatomic) NSMutableData *responseData;
+@property (strong, nonatomic) NSString *searchedWords;
+@property (strong, nonatomic) NSString *url;
 
 @end
 
@@ -22,15 +24,31 @@
     self.recipesCollectionView.delegate = self;
     self.recipesCollectionView.dataSource = self;
     
-    self.responseData = [NSMutableData data];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString: @"http://api.yummly.com/v1/api/recipes?_app_id=f07aaa47&_app_key=6d7ecf41b1791b1d9a05b31dd8b62f39&q=onion+soup"]];
-    [[NSURLConnection alloc] initWithRequest:request delegate:self];
-    
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+}
+
+- (void)callYummlyAPI
+{
+    self.responseData = [NSMutableData data];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    NSString *searchedWords = [self.recipeSearchBar.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    
+    NSString *url = @"http://api.yummly.com/v1/api/recipes?_app_id=f07aaa47&_app_key=6d7ecf41b1791b1d9a05b31dd8b62f39&q=";
+    
+    self.url = [url stringByAppendingString:searchedWords];
+    [self callYummlyAPI];
+
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {

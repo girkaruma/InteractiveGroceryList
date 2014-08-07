@@ -10,9 +10,12 @@
 
 @interface FBUYummlyWebViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegate, NSURLConnectionDelegate, NSURLConnectionDataDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextField *searchTextField;
+
+@property (weak, nonatomic) IBOutlet UISearchBar *recipeSearchBar;
 @property (weak, nonatomic) IBOutlet UICollectionView *recipesCollectionView;
 @property (nonatomic, strong) NSURLSession *session;
 @property (nonatomic, copy) NSArray *recipes;
+
+
 
 @end
