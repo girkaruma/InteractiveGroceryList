@@ -7,15 +7,15 @@
 //
 
 #import "FBUAppDelegate.h"
+#import <Parse/Parse.h>
 
 @implementation FBUAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    [Parse setApplicationId:@"LM00irPcPyEhUarZWvsVztE8eYff37xEjTxZXJGd" clientKey:@"BXClu47EU4AGOCBuW3E37Jgn5w7KOO4agWnmZWMP"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+
     return YES;
 }
 
