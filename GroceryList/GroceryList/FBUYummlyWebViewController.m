@@ -46,6 +46,9 @@
     
     NSString *url = @"http://api.yummly.com/v1/api/recipes?_app_id=f07aaa47&_app_key=6d7ecf41b1791b1d9a05b31dd8b62f39&q=";
     
+    NSString *urlWithKeywords = [url stringByAppendingString:searchedWords];
+    self.url = [urlWithKeywords stringByAppendingString:@"&requirePictures=true"];
+    
     self.url = [url stringByAppendingString:searchedWords];
     [self callYummlyAPI];
 
@@ -72,6 +75,26 @@
     // convert to JSON
     NSError *myError = nil;
     NSDictionary *res = [NSJSONSerialization JSONObjectWithData:self.responseData options:NSJSONReadingMutableLeaves error:&myError];
+    
+    
+    //grab recipe names
+    for (id key in res) {
+        
+        NSString *keyAsString = (NSString *)key;
+        if ([keyAsString isEqualToString:@"matches"]) {
+            id value = [res objectForKey:key];
+            for (id recipe in value) {
+                NSLog(@"%@", recipe);
+            }
+//            for (id property in value) {
+//                NSString *propertyAsString = (NSString *)property;
+//                if ([propertyAsString isEqualToString:@"recipeName"]) {
+//                    NSLog(@"%@", [property objectForKey:propertyAsString]);
+//                }
+            }
+
+}
+    
     
     // show all values
     for(id key in res) {
