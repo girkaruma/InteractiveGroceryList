@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96BC1EDD19930F01009953A4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BC1EDC19930F01009953A4 /* Storyboard.storyboard */; };
 		D260A32419930E4F006BBBDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D260A32319930E4F006BBBDE /* Foundation.framework */; };
 		D260A32619930E4F006BBBDE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D260A32519930E4F006BBBDE /* CoreGraphics.framework */; };
 		D260A32819930E4F006BBBDE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D260A32719930E4F006BBBDE /* UIKit.framework */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96BC1EDC19930F01009953A4 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		D260A32019930E4F006BBBDE /* GroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D260A32319930E4F006BBBDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D260A32519930E4F006BBBDE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				D260A33219930E4F006BBBDE /* FBUAppDelegate.h */,
+				96BC1EDC19930F01009953A4 /* Storyboard.storyboard */,
 				D260A33319930E4F006BBBDE /* FBUAppDelegate.m */,
 				D260A33519930E4F006BBBDE /* Images.xcassets */,
 				D260A32A19930E4F006BBBDE /* Supporting Files */,
@@ -222,6 +225,7 @@
 			files = (
 				D260A32E19930E4F006BBBDE /* InfoPlist.strings in Resources */,
 				D260A33619930E4F006BBBDE /* Images.xcassets in Resources */,
+				96BC1EDD19930F01009953A4 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +442,7 @@
 				D260A34E19930E4F006BBBDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D260A34F19930E4F006BBBDE /* Build configuration list for PBXNativeTarget "GroceryListTests" */ = {
 			isa = XCConfigurationList;
@@ -446,6 +451,7 @@
 				D260A35119930E4F006BBBDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
