@@ -22,6 +22,10 @@
 		D25A462119931A1800267D35 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25A461619931A1800267D35 /* StoreKit.framework */; };
 		D25A462219931A1800267D35 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25A461719931A1800267D35 /* SystemConfiguration.framework */; };
 		D25A4C861993343900267D35 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25A4C851993343900267D35 /* FacebookSDK.framework */; };
+		D25A4C931993402D00267D35 /* FBUCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = D25A4C8C1993402D00267D35 /* FBUCollectionViewLayout.m */; };
+		D25A4C941993402D00267D35 /* FBUGroceryListDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25A4C8E1993402D00267D35 /* FBUGroceryListDetailViewController.m */; };
+		D25A4C951993402D00267D35 /* FBUGroceryListItem.m in Sources */ = {isa = PBXBuildFile; fileRef = D25A4C901993402D00267D35 /* FBUGroceryListItem.m */; };
+		D25A4C961993402D00267D35 /* FBUYummlyWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D25A4C921993402D00267D35 /* FBUYummlyWebViewController.m */; };
 		D260A32419930E4F006BBBDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D260A32319930E4F006BBBDE /* Foundation.framework */; };
 		D260A32619930E4F006BBBDE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D260A32519930E4F006BBBDE /* CoreGraphics.framework */; };
 		D260A32819930E4F006BBBDE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D260A32719930E4F006BBBDE /* UIKit.framework */; };
@@ -63,6 +67,14 @@
 		D25A461619931A1800267D35 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		D25A461719931A1800267D35 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		D25A4C851993343900267D35 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		D25A4C8B1993401F00267D35 /* FBUCollectionViewLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FBUCollectionViewLayout.h; sourceTree = "<group>"; };
+		D25A4C8C1993402D00267D35 /* FBUCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUCollectionViewLayout.m; sourceTree = "<group>"; };
+		D25A4C8D1993402D00267D35 /* FBUGroceryListDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUGroceryListDetailViewController.h; sourceTree = "<group>"; };
+		D25A4C8E1993402D00267D35 /* FBUGroceryListDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUGroceryListDetailViewController.m; sourceTree = "<group>"; };
+		D25A4C8F1993402D00267D35 /* FBUGroceryListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUGroceryListItem.h; sourceTree = "<group>"; };
+		D25A4C901993402D00267D35 /* FBUGroceryListItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUGroceryListItem.m; sourceTree = "<group>"; };
+		D25A4C911993402D00267D35 /* FBUYummlyWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUYummlyWebViewController.h; sourceTree = "<group>"; };
+		D25A4C921993402D00267D35 /* FBUYummlyWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUYummlyWebViewController.m; sourceTree = "<group>"; };
 		D260A32019930E4F006BBBDE /* GroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D260A32319930E4F006BBBDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D260A32519930E4F006BBBDE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -164,6 +176,14 @@
 			isa = PBXGroup;
 			children = (
 				D25A460B1993169F00267D35 /* Parse.framework */,
+				D25A4C8C1993402D00267D35 /* FBUCollectionViewLayout.m */,
+				D25A4C8D1993402D00267D35 /* FBUGroceryListDetailViewController.h */,
+				D25A4C8E1993402D00267D35 /* FBUGroceryListDetailViewController.m */,
+				D25A4C8F1993402D00267D35 /* FBUGroceryListItem.h */,
+				D25A4C901993402D00267D35 /* FBUGroceryListItem.m */,
+				D25A4C911993402D00267D35 /* FBUYummlyWebViewController.h */,
+				D25A4C921993402D00267D35 /* FBUYummlyWebViewController.m */,
+				D25A4C8B1993401F00267D35 /* FBUCollectionViewLayout.h */,
 				96BC1EDC19930F01009953A4 /* Storyboard.storyboard */,
 				96BC1EDE19931182009953A4 /* FBUGroceryListMenu.h */,
 				96BC1EDF19931182009953A4 /* FBUGroceryListMenu.m */,
@@ -302,8 +322,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D25A4C951993402D00267D35 /* FBUGroceryListItem.m in Sources */,
 				D260A33419930E4F006BBBDE /* FBUAppDelegate.m in Sources */,
+				D25A4C961993402D00267D35 /* FBUYummlyWebViewController.m in Sources */,
+				D25A4C941993402D00267D35 /* FBUGroceryListDetailViewController.m in Sources */,
 				96BC1EE019931182009953A4 /* FBUGroceryListMenu.m in Sources */,
+				D25A4C931993402D00267D35 /* FBUCollectionViewLayout.m in Sources */,
 				D260A33019930E4F006BBBDE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
