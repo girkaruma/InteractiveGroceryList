@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		96BC1EDD19930F01009953A4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BC1EDC19930F01009953A4 /* Storyboard.storyboard */; };
+		96BC1EE019931182009953A4 /* FBUGroceryListMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BC1EDF19931182009953A4 /* FBUGroceryListMenu.m */; };
 		D260A32419930E4F006BBBDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D260A32319930E4F006BBBDE /* Foundation.framework */; };
 		D260A32619930E4F006BBBDE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D260A32519930E4F006BBBDE /* CoreGraphics.framework */; };
 		D260A32819930E4F006BBBDE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D260A32719930E4F006BBBDE /* UIKit.framework */; };
@@ -34,6 +35,8 @@
 
 /* Begin PBXFileReference section */
 		96BC1EDC19930F01009953A4 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		96BC1EDE19931182009953A4 /* FBUGroceryListMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUGroceryListMenu.h; sourceTree = "<group>"; };
+		96BC1EDF19931182009953A4 /* FBUGroceryListMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUGroceryListMenu.m; sourceTree = "<group>"; };
 		D260A32019930E4F006BBBDE /* GroceryList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GroceryList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D260A32319930E4F006BBBDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D260A32519930E4F006BBBDE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,6 +114,8 @@
 			children = (
 				D260A33219930E4F006BBBDE /* FBUAppDelegate.h */,
 				96BC1EDC19930F01009953A4 /* Storyboard.storyboard */,
+				96BC1EDE19931182009953A4 /* FBUGroceryListMenu.h */,
+				96BC1EDF19931182009953A4 /* FBUGroceryListMenu.m */,
 				D260A33319930E4F006BBBDE /* FBUAppDelegate.m */,
 				D260A33519930E4F006BBBDE /* Images.xcassets */,
 				D260A32A19930E4F006BBBDE /* Supporting Files */,
@@ -245,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D260A33419930E4F006BBBDE /* FBUAppDelegate.m in Sources */,
+				96BC1EE019931182009953A4 /* FBUGroceryListMenu.m in Sources */,
 				D260A33019930E4F006BBBDE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
