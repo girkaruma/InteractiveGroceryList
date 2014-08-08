@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		96BC1EDD19930F01009953A4 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96BC1EDC19930F01009953A4 /* Storyboard.storyboard */; };
 		96BC1EE019931182009953A4 /* FBUGroceryListMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BC1EDF19931182009953A4 /* FBUGroceryListMenu.m */; };
+		96BC1F9C199348F0009953A4 /* FBULogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BC1F9B199348F0009953A4 /* FBULogInViewController.m */; };
+		96BC1F9F19934942009953A4 /* FBUSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96BC1F9E19934942009953A4 /* FBUSignUpViewController.m */; };
 		D25A460C1993169F00267D35 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25A460B1993169F00267D35 /* Parse.framework */; };
 		D25A461819931A1800267D35 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25A460D19931A1800267D35 /* Accounts.framework */; };
 		D25A461919931A1800267D35 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D25A460E19931A1800267D35 /* AudioToolbox.framework */; };
@@ -54,6 +56,10 @@
 		96BC1EDC19930F01009953A4 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
 		96BC1EDE19931182009953A4 /* FBUGroceryListMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBUGroceryListMenu.h; sourceTree = "<group>"; };
 		96BC1EDF19931182009953A4 /* FBUGroceryListMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBUGroceryListMenu.m; sourceTree = "<group>"; };
+		96BC1F9A199348F0009953A4 /* FBULogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBULogInViewController.h; path = ../../../FoodApp/FBU/FBUFood/FBUFood/FBULogInViewController.h; sourceTree = "<group>"; };
+		96BC1F9B199348F0009953A4 /* FBULogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBULogInViewController.m; path = ../../../FoodApp/FBU/FBUFood/FBUFood/FBULogInViewController.m; sourceTree = "<group>"; };
+		96BC1F9D19934942009953A4 /* FBUSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FBUSignUpViewController.h; path = ../../../FoodApp/FBU/FBUFood/FBUFood/FBUSignUpViewController.h; sourceTree = "<group>"; };
+		96BC1F9E19934942009953A4 /* FBUSignUpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FBUSignUpViewController.m; path = ../../../FoodApp/FBU/FBUFood/FBUFood/FBUSignUpViewController.m; sourceTree = "<group>"; };
 		D25A460B1993169F00267D35 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		D25A460D19931A1800267D35 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		D25A460E19931A1800267D35 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -184,11 +190,15 @@
 				D25A4C911993402D00267D35 /* FBUYummlyWebViewController.h */,
 				D25A4C921993402D00267D35 /* FBUYummlyWebViewController.m */,
 				D25A4C8B1993401F00267D35 /* FBUCollectionViewLayout.h */,
-				96BC1EDC19930F01009953A4 /* Storyboard.storyboard */,
 				96BC1EDE19931182009953A4 /* FBUGroceryListMenu.h */,
 				96BC1EDF19931182009953A4 /* FBUGroceryListMenu.m */,
+				96BC1F9D19934942009953A4 /* FBUSignUpViewController.h */,
+				96BC1F9E19934942009953A4 /* FBUSignUpViewController.m */,
 				D260A33219930E4F006BBBDE /* FBUAppDelegate.h */,
 				D260A33319930E4F006BBBDE /* FBUAppDelegate.m */,
+				96BC1F9B199348F0009953A4 /* FBULogInViewController.m */,
+				96BC1F9A199348F0009953A4 /* FBULogInViewController.h */,
+				96BC1EDC19930F01009953A4 /* Storyboard.storyboard */,
 				D260A33519930E4F006BBBDE /* Images.xcassets */,
 				D260A32A19930E4F006BBBDE /* Supporting Files */,
 			);
@@ -322,6 +332,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96BC1F9F19934942009953A4 /* FBUSignUpViewController.m in Sources */,
+				96BC1F9C199348F0009953A4 /* FBULogInViewController.m in Sources */,
 				D25A4C951993402D00267D35 /* FBUGroceryListItem.m in Sources */,
 				D260A33419930E4F006BBBDE /* FBUAppDelegate.m in Sources */,
 				D25A4C961993402D00267D35 /* FBUYummlyWebViewController.m in Sources */,
@@ -452,6 +464,8 @@
 					/Users/jenniferjzhang/Documents/FacebookSDK,
 					/Users/jenniferjzhang/Documents/FacebookSDK/FBAudienceNetwork,
 					"$(PROJECT_DIR)",
+					/Users/umag/Desktop/FoodApp/FBU/FBUFood,
+					/Users/umag/Desktop/FoodApp/FBU/FBUFood/FBUFood,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GroceryList/GroceryList-Prefix.pch";
@@ -473,6 +487,8 @@
 					/Users/jenniferjzhang/Documents/FacebookSDK,
 					/Users/jenniferjzhang/Documents/FacebookSDK/FBAudienceNetwork,
 					"$(PROJECT_DIR)",
+					/Users/umag/Desktop/FoodApp/FBU/FBUFood,
+					/Users/umag/Desktop/FoodApp/FBU/FBUFood/FBUFood,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GroceryList/GroceryList-Prefix.pch";

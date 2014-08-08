@@ -12,4 +12,6 @@
 
 @interface FBUGroceryListMenu : UIViewController <PFLogInViewControllerDelegate>
 
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *logoutButton;
+
 @end
