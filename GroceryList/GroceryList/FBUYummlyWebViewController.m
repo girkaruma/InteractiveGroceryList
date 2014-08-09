@@ -78,24 +78,12 @@
     
     
     //grab recipe names
-    for (id key in res) {
-        
-        NSString *keyAsString = (NSString *)key;
-        if ([keyAsString isEqualToString:@"matches"]) {
-            id value = [res objectForKey:key];
-            for (id recipe in value) {
-                NSLog(@"%@", recipe);
-            }
-//            for (id property in value) {
-//                NSString *propertyAsString = (NSString *)property;
-//                if ([propertyAsString isEqualToString:@"recipeName"]) {
-//                    NSLog(@"%@", [property objectForKey:propertyAsString]);
-//                }
-            }
+    for (id recipe in res[@"matches"]) {
+        NSDictionary *recipeDict = (NSDictionary *)recipe;
+        NSLog(@"%@", recipeDict[@"recipeName"]);
+    }
 
-}
-    
-    
+
     // show all values
     for(id key in res) {
         
