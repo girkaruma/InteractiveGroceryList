@@ -8,23 +8,102 @@
 
 #import "FBUYummlyWebViewController.h"
 
+@interface FBUYummlyWebViewController ()
+
+@property (strong, nonatomic) NSMutableData *responseData;
+@property (strong, nonatomic) NSString *searchedWords;
+@property (strong, nonatomic) NSString *url;
+
+@end
+
+
 @implementation FBUYummlyWebViewController
 
 - (void)viewDidLoad
 {
     self.recipesCollectionView.delegate = self;
     self.recipesCollectionView.dataSource = self;
+    
 }
 
-- (void)fetchFeed
+- (void)viewDidAppear:(BOOL)animated
 {
-    NSString *requestString = @"";
-    NSURL *url = [NSURL URLWithString:requestString];
-    NSURLRequest *req = [NSURLRequest requestWithURL:url];
-    NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:req completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-    }];
-    [dataTask resume];
+    [super viewDidAppear:animated];
+}
+
+- (void)callYummlyAPI
+{
+    self.responseData = [NSMutableData data];
+    
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:self.url]];
+    [[NSURLConnection alloc] initWithRequest:request delegate:self];
+}
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    [searchBar resignFirstResponder];
+    NSString *searchedWords = [self.recipeSearchBar.text stringByReplacingOccurrencesOfString:@" " withString:@"+"];
+    
+    NSString *url = @"http://api.yummly.com/v1/api/recipes?_app_id=f07aaa47&_app_key=6d7ecf41b1791b1d9a05b31dd8b62f39&q=";
+    
+    NSString *urlWithKeywords = [url stringByAppendingString:searchedWords];
+    self.url = [urlWithKeywords stringByAppendingString:@"&requirePictures=true"];
+    
+    self.url = [url stringByAppendingString:searchedWords];
+    [self callYummlyAPI];
+
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
+    NSLog(@"didReceiveResponse");
+    [self.responseData setLength:0];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data {
+    [self.responseData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
+    NSLog(@"didFailWithError");
+    NSLog([NSString stringWithFormat:@"Connection failed: %@", [error description]]);
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSLog(@"connectionDidFinishLoading");
+    NSLog(@"Succeeded! Received %d bytes of data",[self.responseData length]);
+    
+    // convert to JSON
+    NSError *myError = nil;
+    NSDictionary *res = [NSJSONSerialization JSONObjectWithData:self.responseData options:NSJSONReadingMutableLeaves error:&myError];
+    
+    
+    //grab recipe names
+    for (id recipe in res[@"matches"]) {
+        NSDictionary *recipeDict = (NSDictionary *)recipe;
+        NSLog(@"%@", recipeDict[@"recipeName"]);
+    }
+
+
+    // show all values
+    for(id key in res) {
+        
+        id value = [res objectForKey:key];
+        
+        NSString *keyAsString = (NSString *)key;
+        NSString *valueAsString = (NSString *)value;
+        
+        NSLog(@"key: %@", keyAsString);
+        NSLog(@"value: %@", valueAsString);
+    }
+    
+    // extract specific value...
+    NSArray *results = [res objectForKey:@"results"];
+    
+    for (NSDictionary *result in results) {
+        NSString *icon = [result objectForKey:@"icon"];
+        NSLog(@"icon: %@", icon);
+    }
+    
 }
 
 #pragma mark - UICollectionViewDelegateJSPintLayout
